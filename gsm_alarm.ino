@@ -177,7 +177,7 @@ void loop() {
             {
               s++;
               Serial.print(s);
-              sms(msg, "+79026053421");  //отправляем СМС на номер +71234567890//sendsms
+              sms(msg, "+79026051111");  //отправляем СМС на номер +71234561111//sendsms
               Serial.println(" ");
               SMSWasSend = 1;
             }
@@ -248,7 +248,7 @@ void loop() {
 
 
     if (val.indexOf("RING") > -1) {  //если звонок обнаружен, то проверяем номер
-      if (val.indexOf("79026053421") > -1 || val.indexOf("79026053498") > -1) {  //если номер звонящего наш. Укажите свой номер без "+"
+      if (val.indexOf("79026051111") > -1 || val.indexOf("79026051111") > -1) {  //если номер звонящего наш. Укажите свой номер без "+"
         Serial.println("--- MASTER RING DETECTED ---");
         mySerial.println("ATH0");  //разрываем связь
         delay(1000);
@@ -265,7 +265,7 @@ void loop() {
           lastcall = false;
           callon = false;
           statusOXR = false;
-          sms(String("RESET"), String("+79026053421"));  //отправляем СМС на номер +71234567890//sendsms
+          sms(String("RESET"), String("+79026051111"));  //отправляем СМС на номер +7123451111//sendsms
           //digitalWrite(ledSecurity, false);  //включаем выключаем реле security
         }
 
